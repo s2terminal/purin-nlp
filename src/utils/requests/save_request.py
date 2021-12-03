@@ -11,11 +11,12 @@ class SaveRequest():
     # 絶対パスはやめて環境変数から受け取ったほうが良い
     LOCAL_SAVE_BASE_DIR = '/app/data'
     LOCAL_SAVE_DIR = 'save_request'
+    FILENAME_EXTENSION = 'html'
 
     def __init__(self, url: str, params: dict[str, str]) -> None:
         self.url = url
         self.params = params
-        self.filename = f'{self._hash()}.html'
+        self.filename = f'{self._hash()}.{self.FILENAME_EXTENSION}'
 
     def _hash(self):
         return base64encode("".join([self.url, urlencode(self.params)]))
@@ -25,9 +26,9 @@ class SaveRequest():
 
     def get_response(self) -> str:
         if self._exists_local():
-            print('use local data')
+            print(f'use local data {self._local_save_dir()}')
             return self._load_local()
-        print('use HTTP get')
+        print(f'use HTTP get {self.url}')
         ret = self._http_request()
         self._save_local(ret)
         return ret

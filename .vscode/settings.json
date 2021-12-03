@@ -3,5 +3,13 @@
   "python.linting.flake8Path": "/root/.cache/pypoetry/virtualenvs/purin-nlp-9TtSrW0h-py3.10/bin/flake8",
   "python.formatting.autopep8Path": "/root/.cache/pypoetry/virtualenvs/purin-nlp-9TtSrW0h-py3.10/bin/autopep8",
   "python.analysis.typeCheckingMode": "basic",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "160"
+  ],
+  "python.linting.flake8Args": [
+    "--max-line-length",
+    "160"
+  ]
 }
