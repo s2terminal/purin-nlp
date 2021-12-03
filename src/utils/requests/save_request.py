@@ -1,6 +1,7 @@
 from os import makedirs
 from os.path import exists, join
 from urllib.parse import urlencode
+from time import sleep
 
 import requests
 
@@ -29,6 +30,7 @@ class SaveRequest():
             print(f'use local data {self._local_save_dir()}')
             return self._load_local()
         print(f'use HTTP get {self.url}')
+        sleep(1)
         ret = self._http_request()
         self._save_local(ret)
         return ret

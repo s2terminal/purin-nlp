@@ -11,8 +11,8 @@ class SaveTwitterAPI(SaveRequest):
     TWITTER_API_SEARCH_URL = 'https://api.twitter.com/2/tweets/search/recent'
     FILENAME_EXTENSION = 'json'
 
-    def __init__(self, query: str, next_token: str = None) -> None:
-        params = {'query': query, 'max_results': 100}
+    def __init__(self, keyword: str, next_token: str = None) -> None:
+        params = {'query': f'({keyword}) -is:retweet', 'max_results': 100}
         if next_token:
             params['next_token'] = next_token
         super().__init__(url=self.TWITTER_API_SEARCH_URL, params=params)
