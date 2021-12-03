@@ -1,0 +1,5 @@
+{
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "/root/.cache/pypoetry/virtualenvs/purin-nlp-9TtSrW0h-py3.10/bin/flake8",
+  "python.formatting.autopep8Path": "/root/.cache/pypoetry/virtualenvs/purin-nlp-9TtSrW0h-py3.10/bin/autopep8"
+}
