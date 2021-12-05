@@ -1,6 +1,11 @@
+from typing import Any
+
 from src.utils.requests.save_twitter_api import SaveTwitterAPI
 
 import pandas
+
+import streamlit
+st = streamlit  # type: Any
 
 
 def some_twitter_apis(query: str, times: int):
@@ -15,8 +20,12 @@ def some_twitter_apis(query: str, times: int):
         else:
             df = pandas.concat([df, pandas.DataFrame(res['data'])])
     if type(df) is pandas.DataFrame:
-        df.to_csv('data/twitter_api_data.tsv', sep='\t')
+        filepath = 'data/twitter_api_data.tsv'
+        df.to_csv(filepath, sep='\t')
+        return filepath
 
 
-if __name__ == '__main__':
-    some_twitter_apis('プリン', 20)
+def fetch_twitter(keyword: str):
+    if st.button("Twitterから取得"):
+        filepath = some_twitter_apis(keyword, 20)
+        st.write(f"`{filepath}`に保存されました")

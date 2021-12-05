@@ -1,9 +1,18 @@
 version: '3'
+
+x-app: &app
+  build: .
+  volumes:
+    - .:/app
+  environment:
+    - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
+
 services:
   app:
-    build: .
-    volumes:
-      - .:/app
+    <<: *app
     command: "poetry run jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.disable_check_xsrf=True"
-    environment:
-      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
+  web:
+    <<: *app
+    command: "poetry run streamlit run src/streamlit/main.py --server.port 8080"
+    ports:
+      - 8080:8080
