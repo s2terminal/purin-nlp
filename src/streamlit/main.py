@@ -1,5 +1,5 @@
 from src.streamlit.fetch_twitter import fetch_twitter
-from typing import Any, Literal
+from typing import Any
 
 import streamlit
 st = streamlit  # type: Any

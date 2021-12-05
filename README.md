@@ -10,3 +10,8 @@ access http://localhost:8080/
 ```
 $ docker-compose run --rm app poetry run pytest
 ```
+
+## Linting
+```
+$ docker-compose run --rm app poetry run flake8
+```
