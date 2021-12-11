@@ -1,6 +1,6 @@
-	id	text	URL	label	備考
-0	11111111	プリンおいしい	https://example.com	0
-0	11111111	プリンかわいい	https://example.com	1
-0	11111111	セブンのプリンかわいい	https://example.com	0
-0	11111111	プリンうまかった	https://example.com	0
-0	11111111	相手のプリンうまかった	https://example.com	1
+	text	label
+0	プリンおいしい	0
+0	プリンかわいい	1
+0	セブンのプリンかわいい	0
+0	プリンうまかった	0
+0	相手のプリンうまかった	1
