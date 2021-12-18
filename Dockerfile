@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 # TransformersのインストールにRustコンパイラが要求される
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+ENV PATH $PATH:/root/.cargo/bin
 
 RUN pip install poetry
 
