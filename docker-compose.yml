@@ -13,6 +13,7 @@ x-app: &app
         - driver: nvidia
           device_ids: ['0']
           capabilities: [gpu]
+  mem_limit: 16g
 
 services:
   app:

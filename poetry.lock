@@ -293,6 +293,18 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "fugashi"
+version = "1.1.1"
+description = "A Cython MeCab wrapper for fast, pythonic Japanese tokenization."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+unidic = ["unidic"]
+unidic-lite = ["unidic-lite"]
+
+[[package]]
 name = "gast"
 version = "0.5.3"
 description = "Python AST that abstracts the underlying Python version"
@@ -429,6 +441,14 @@ name = "iniconfig"
 version = "1.1.1"
 description = "iniconfig: brain-dead simple config-ini parsing"
 category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "ipadic"
+version = "1.0.0"
+description = "IPAdic packaged for Python"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -1819,7 +1839,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10"
-content-hash = "f7268e6dde1e359fd878e7588331d9f806156698cdb1422dfa9eca7507ba6326"
+content-hash = "ea90b7d367c7eaaa1860d024a4eefbadcbcfd7b3ec195cf36579ba7c769090b2"
 
 [metadata.files]
 absl-py = [
@@ -2009,6 +2029,24 @@ flatbuffers = [
     {file = "flatbuffers-2.0-py2.py3-none-any.whl", hash = "sha256:3751954f0604580d3219ae49a85fafec9d85eec599c0b96226e1bc0b48e57474"},
     {file = "flatbuffers-2.0.tar.gz", hash = "sha256:12158ab0272375eab8db2d663ae97370c33f152b27801fa6024e1d6105fd4dd2"},
 ]
+fugashi = [
+    {file = "fugashi-1.1.1-cp35-cp35m-macosx_10_14_x86_64.whl", hash = "sha256:f4cb760951757ee8ceb144208eb35ca86181f4693fd03bd73ff34e5bf2df8698"},
+    {file = "fugashi-1.1.1-cp35-cp35m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:ab4b0496d0e856535296dcae36fe35c791b471c3da530e4dcbd7b5070c4fcd8a"},
+    {file = "fugashi-1.1.1-cp35-cp35m-win_amd64.whl", hash = "sha256:07a0185741a1558b9802801de2f9b34390c3f138074a6849aa601755f60d2604"},
+    {file = "fugashi-1.1.1-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:9fb934f6c3f849b661f7b4b57903259017436bea9202be9d63198cbfe37df199"},
+    {file = "fugashi-1.1.1-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:9b1806a3cd344d260999954c45a1ddb5e84cef57ac49315fb861c254ed759ebc"},
+    {file = "fugashi-1.1.1-cp36-cp36m-win_amd64.whl", hash = "sha256:51920491fd89f30356d43093439e3cc6283f18f509e50014db5f0a71da8abbe3"},
+    {file = "fugashi-1.1.1-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:f094b3655c374897717e3bc9a9a5f13d1f499e8bfde8d4460c4ae6b8810cb0c2"},
+    {file = "fugashi-1.1.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:6f6995b4897c8f8d6ea118732c3c62a8befeed20181a8d7b1a96ee2b65c7a434"},
+    {file = "fugashi-1.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:53280ea0f65e7c9f8f91844eeaaf5202858997bc44cd55903a8089eeca15ae63"},
+    {file = "fugashi-1.1.1-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:99f384ec47e8c7d9d1499f5dc6bc0bc52d7281fcc2345f3a4c62937c1bcb5ba5"},
+    {file = "fugashi-1.1.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:98ff499188e398f149c449800ec7038ef4cf93cb4ae8cdf3f52356b8c7607864"},
+    {file = "fugashi-1.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:cf7a28f311f963eb666824764388f4bc434e1ac230a55d2cd4f998ec0712f3f8"},
+    {file = "fugashi-1.1.1-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:de07719e0841036c64abdd7bd942736918666e67f254de66f958e3457756e23a"},
+    {file = "fugashi-1.1.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:e1314520a1f92b79d0616c64a86839ba594fcd489b1fc9c7cc456acb508ae1fc"},
+    {file = "fugashi-1.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:f462d39f937993d6964d8cd0979ac96a79cae621d53cd65f4e2b31b73392b704"},
+    {file = "fugashi-1.1.1.tar.gz", hash = "sha256:c57125af6f93bffc5c25803bbc476cb41527bfe8841a2a15019e7f12cc181d30"},
+]
 gast = [
     {file = "gast-0.5.3-py3-none-any.whl", hash = "sha256:211aac1e58c167b25d3504998f2db694454a24bb1fb1225bce99420166f21d6a"},
     {file = "gast-0.5.3.tar.gz", hash = "sha256:cfbea25820e653af9c7d1807f659ce0a0a9c64f2439421a7bba4f0983f532dea"},
@@ -2109,6 +2147,9 @@ idna = [
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
+]
+ipadic = [
+    {file = "ipadic-1.0.0.tar.gz", hash = "sha256:f5923d31eca6131acaaf18ed28d8998665b1347b640d3a6476f64650e9a71c07"},
 ]
 ipykernel = [
     {file = "ipykernel-6.6.0-py3-none-any.whl", hash = "sha256:82ded8919fa7f5483be2b6219c3b13380d93faab1fc49cc2cfcd10e9e24cc158"},
